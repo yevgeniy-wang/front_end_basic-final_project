@@ -1,0 +1,8 @@
+*.css
+*.min.css
+**.css.map
+.sass-cache/
+*.sass.map
+*.scss.map
+.idea
+!reset.css

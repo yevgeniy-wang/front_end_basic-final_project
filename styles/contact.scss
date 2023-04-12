@@ -1,0 +1,83 @@
+@import "header";
+@import "footer";
+@import "assets";
+@import "contact-form";
+
+.contact-main {
+  @include flex(initial, initial);
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 30px 30px;
+}
+
+.contacts {
+  @include flex(flex-start, initial);
+  flex-direction: column;
+  gap: 30px;
+  @include montserrat(400, 1.3125rem, 1.875rem);
+
+  &__address {
+    color: $main-regular;
+  }
+
+  &__wrap {
+    @include flex(flex-start, initial);
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__tel:link {
+    color: $main-alt;
+  }
+
+  &__fb {
+    @include flex(center, initial);
+    @include montserrat(700, 0.75rem, 1rem);
+    gap: 10px;
+
+    .fa-facebook {
+      font-size: 38px;
+    }
+  }
+
+  &__line {
+    border: 2px solid $grey-separator;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .contact-main {
+    padding: 0 60px 30px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .contact-main {
+    flex-direction: row;
+    gap: 60px;
+
+    &__contacts, &__form {
+      width: calc(calc(100% - 60px) / 2);
+    }
+  }
+  body {
+    @include flex(initial, space-between);
+    flex-direction: column;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contact-main {
+    padding: 0 15vw 60px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .contact-main {
+    padding: 0 20vw 60px;
+  }
+}

@@ -1,0 +1,64 @@
+@import "assets";
+
+$white02: rgba(255, 255, 255, 0.2);
+
+.services__bg {
+  background: $gradient-supersoft;
+  border-radius: 0 0 12px 12px;
+}
+
+.header-tel:link {
+  color: $white;
+}
+
+.switch-lang {
+  label {
+    color: $white;
+  }
+}
+
+.switch-lang label:hover {
+  background: $white02;
+}
+
+header {
+  .fa-facebook {
+    color: $white;
+  }
+}
+
+.header-mob {
+  &__top {
+    background: $header-mob-top;
+  }
+}
+
+.fa-bars {
+  color: $white;
+}
+
+.logo {
+  &__image, span {
+    fill: $white;
+  }
+
+  span, &__hlegal, &__law {
+    color: $white;
+  }
+}
+
+.header-nav {
+  a:link, a:visited {
+    color: $white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.main-info {
+  &__address {
+    color: $white;
+  }
+}

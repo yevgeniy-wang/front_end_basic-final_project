@@ -1,0 +1,199 @@
+@import "header";
+@import "footer";
+@import "assets";
+
+.main-content {
+
+  h1 {
+    @include montserrat(700, 1.875rem, 2.312rem);
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    @include montserrat(400, 1.1875rem, 1.875rem);
+  }
+
+  &__par {
+    @include flex(flex-start, center);
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.stats {
+  @include flex(initial, initial);
+  flex-direction: column;
+  gap: 40px;
+
+  &--border {
+    border-left: 4px solid $grey-separator;
+    padding-left: 30px;
+  }
+
+  &__item {
+    p {
+      @include montserrat(400, 1rem, 1.25rem);
+    }
+  }
+
+  &__heading {
+    @include flex(center, initial);
+    gap: 8px;
+    padding-bottom: 10px;
+
+    span {
+      @include montserrat(700, 36px, 44px);
+      background: $gradient-redtext;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.main-wrap {
+  @include flex(initial, initial);
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 30px 60px;
+
+  &__heading-right {
+    @include montserrat(700, 1.875rem, 2.312rem);
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.team {
+  @include flex(center, center);
+  background: url("../gallery/team.png") no-repeat;
+  background-size: cover;
+  aspect-ratio: 3.288 / 1;
+  margin-bottom: 60px;
+
+  span {
+    @include montserrat(700, clamp(36px, 8vw, 96px), clamp(36px, 8vw, 96px));
+    letter-spacing: clamp(13px, 7.8vw, 63px);
+    text-transform: uppercase;
+    color: $white;
+    opacity: 0.8;
+    padding-left: clamp(13px, 7.8vw, 63px);
+
+  }
+}
+
+.achievements {
+  padding: 30px 60px 0;
+  background: $grey-bg;
+
+  &__wrapper {
+    @include flex(initial, initial);
+    flex-direction: column;
+    gap: 30px;
+    border-bottom: 2px solid $grey-separator;
+  }
+
+  &__heading {
+    @include montserrat(700, 0.875rem, 1.0625rem);
+    text-transform: uppercase;
+    color: $main-regular;
+    align-self: center;
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background: $white;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 25px 0;
+
+  img {
+    height: 40px;
+  }
+}
+
+.swiper-wrapper {
+  height: max-content !important;
+}
+
+.swiper-pagination {
+  position: static !important;
+  margin: 30px 0;
+}
+
+@media screen and (min-width: 426px) {
+  .main-wrap {
+    padding: 0 60px 60px;
+
+    &__heading-right {
+      @include montserrat(700, 2.375rem, 2.875rem);
+    }
+  }
+  .main-content {
+    &__par {
+      h1 {
+        @include montserrat(700, 2.375rem, 2.875rem);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 915px) {
+  .main-wrap {
+    flex-direction: row;
+
+    &__heading-right {
+      width: 362px;
+      padding-left: 30px;
+    }
+  }
+
+  .stats {
+    height: 322px;
+
+    &__item {
+      width: 388px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-slide {
+    img {
+      height: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-wrap {
+    padding: 0 10vw 60px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-wrap {
+    padding: 0 15vw 60px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .achievements {
+    padding: 30px 15vw 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-wrap {
+    padding: 0 20vw 60px;
+  }
+}

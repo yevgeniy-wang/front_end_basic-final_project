@@ -1,0 +1,36 @@
+@import "header";
+@import "footer";
+@import "assets";
+@import "publications";
+
+.switch-field {
+  @include flex(flex-start, center);
+  background: $grey-separator;
+  width: max-content;
+  border-radius: 12px;
+  padding: 2px;
+  margin: auto;
+}
+
+.switch-field input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+}
+
+.switch-field label {
+  @include montserrat(700, 1rem, 1.25rem);
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.switch-field label:hover {
+  cursor: pointer;
+  background: $grey-bg;
+}
+
+.switch-field input:checked + label {
+  background-color: $white;
+}

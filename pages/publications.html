@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../styles/reset.css">
+	<link rel="stylesheet" href="../styles/publications-page.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/b8e4c6f0e6.js" crossorigin="anonymous"></script>
+	<title>Publications</title>
+</head>
+<body>
+<header>
+	<div class="header-mob">
+		<div class="header-mob__menu-bg inactive-bg"></div>
+		<nav class="header-mob__menu">
+			<a class="close-btn" href="javascript:void(0);" onclick="onClick()"><i class="fa-solid fa-xmark"></i></a>
+			<ul class="header-mob__categories">
+				<li class="header-mob__category"><a href="./about.html">about us</a></li>
+				<li class="header-mob__category"><a href="./services.html">services</a></li>
+				<li class="header-mob__category"><a href="./publications.html">publications</a></li>
+				<li class="header-mob__category"><u>contact</u></li>
+			</ul>
+		</nav>
+		<div class="header-mob__top">
+			<div class="header-mob__switch-lang switch-lang">
+				<input type="radio" id="mob-one" name="switch-lang-mob" value="ua"/>
+				<label for="mob-one">УК</label>
+				<input type="radio" id="mob-two" name="switch-lang-mob" value="ru"/>
+				<label for="mob-two">РУ</label>
+				<input type="radio" id="mob-three" name="switch-lang-mob" value="en" checked/>
+				<label for="mob-three">EN</label>
+			</div>
+			<a class="header-mob__tel header-tel" href="tel:0800 211 927">0800 211 927</a>
+		</div>
+		<div class="header-mob__bot">
+			<div class="header-mob__logo logo">
+				<a class="logo__image" href="../index.html">
+					<p class="logo__hlegal">hlegal</p>
+					<p class="logo__law">law company</p>
+				</a>
+				<img class="logo__slash" src="../gallery/slash.svg" alt="slash">
+				<span>publications</span>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="onClick()">
+				<i class="fa-solid fa-bars"></i>
+			</a>
+		</div>
+	</div>
+	<div class="header-tab">
+		<div class="header-tab__main-info main-info">
+			<div class="main-info__switch-lang switch-lang">
+				<input type="radio" id="radio-one" name="switch-lang-tab" value="ua"/>
+				<label for="radio-one">УК</label>
+				<input type="radio" id="radio-two" name="switch-lang-tab" value="ru"/>
+				<label for="radio-two">РУ</label>
+				<input type="radio" id="radio-three" name="switch-lang-tab" value="en" checked/>
+				<label for="radio-three">EN</label>
+			</div>
+			<i class="main-info__fa-circle fa-solid fa-circle"></i>
+			<span class="main-info__address">Kyiv, Mechnikova str., 14/1</span>
+			<i class="main-info__fa-circle fa-solid fa-circle"></i>
+			<a class="main-info__tel header-tel" href="tel:0800 211 927">0800 211 927</a>
+			<i class="main-info__circle fa-solid fa-circle"></i>
+			<a target="_blank" href="https://facebook.com"><i class="main-info__fa-facebook fa-brands fa-facebook"></i></a>
+		</div>
+		<div class="header-tab__logo logo">
+			<a class="logo__image" href="../index.html">
+				<p class="logo__hlegal">hlegal</p>
+				<p class="logo__law">law company</p>
+			</a>
+			<img class="logo__slash" src="../gallery/slash.svg" alt="slash">
+			<span>publications</span>
+		</div>
+		<nav>
+			<ul class="header-tab__nav header-nav">
+				<li><a href="./about.html">about us</a></li>
+				<li><a href="./services.html">services</a></li>
+				<li><u class="header-nav__current">publications</u></li>
+				<li><a href="./contact.html">contact</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="header-desk">
+		<div class="header-desk__logo logo">
+			<a class="logo__image" href="../index.html">
+				<p class="logo__hlegal">hlegal</p>
+				<p class="logo__law">law company</p>
+			</a>
+			<img class="logo__slash" src="../gallery/slash.svg" alt="slash">
+			<span>publications</span>
+		</div>
+		<div class="header-desk__menu">
+			<div class="header-desk__main-info main-info">
+				<div class="main-info__switch-lang switch-lang">
+					<input type="radio" id="radio-four" name="switch-lang-desk" value="ua"/>
+					<label for="radio-four">УК</label>
+					<input type="radio" id="radio-five" name="switch-lang-desk" value="ru"/>
+					<label for="radio-five">РУ</label>
+					<input type="radio" id="radio-six" name="switch-lang-desk" value="en" checked/>
+					<label for="radio-six">EN</label>
+				</div>
+				<i class="main-info__fa-circle fa-solid fa-circle"></i>
+				<span class="main-info__address">Kyiv, Mechnikova str., 14/1</span>
+				<i class="main-info__fa-circle fa-solid fa-circle"></i>
+				<a class="main-info__tel header-tel" href="tel:0800 211 927">0800 211 927</a>
+				<i class="main-info__fa-circle fa-solid fa-circle"></i>
+				<a target="_blank" href="https://facebook.com"><i
+						class="main-info__fa-facebook fa-brands fa-facebook"></i></a>
+			</div>
+			<nav>
+				<ul class="header-desk__nav header-nav">
+					<li><a href="./about.html">about us</a></li>
+					<li><a href="./services.html">services</a></li>
+					<li><u class="header-nav__current">publications</u></li>
+					<li><a href="./contact.html">contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<main>
+	<section class="publications-main">
+		<form class="publications-main__switch-field switch-field">
+			<input type="radio" id="news" name="news-articles" value="news" checked="">
+			<label for="news">news</label>
+			<input type="radio" id="articles" name="news-articles" value="articles">
+			<label for="articles">articles</label>
+		</form>
+		<ul class="publications-main__publications publications">
+			<li class="publications__item publication">
+				<img class="publication__image" src="../gallery/Publication-1.png" alt="equity">
+				<div class="publication__wrapper">
+					<a href="#">Equity associate</a>
+					<span>April 22</span>
+					<hr>
+					<p>I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents
+						told me that if I…</p>
+				</div>
+			</li>
+			<li class="publications__item publication">
+				<img class="publication__image" src="../gallery/Publication-2.jpg" alt="gdpr">
+				<div class="publication__wrapper">
+					<a href="#">Penalty for the Good Corporation: what will happen to Google and others for violating
+						the GDPR</a>
+					<span>September 29</span>
+					<hr>
+					<p>And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua
+						January 21 National Commission for Data Protection.</p>
+				</div>
+			</li>
+			<li class="publications__item publication">
+				<img class="publication__image" src="../gallery/Publication-3.jpg" alt="millennial">
+				<div class="publication__wrapper">
+					<a href="#">Millennial Testament</a>
+					<span>August 19</span>
+					<hr>
+					<p>What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical
+						legacy of the Ukrainian generation X looks like this: an apartment in…</p>
+				</div>
+			</li>
+			<li class="publications__item publication">
+				<img class="publication__image" src="../gallery/Publication-4.jpg" alt="law">
+				<div class="publication__wrapper">
+					<a href="#">Language Law: How to Make Your Website Relevant</a>
+					<span>August 19</span>
+					<hr>
+					<p>Natalia Kyryk, head of content studio Wordfactory.ua First, it's beautiful! This is the number
+						one argument in favor of the Ukrainian-language site. Secondly, it is effective. IN…</p>
+				</div>
+			</li>
+			<li class="publications__item publication">
+				<img class="publication__image" src="../gallery/Publication-5.jpg" alt="children">
+				<div class="publication__wrapper">
+					<a href="#">Reimbursement of the child's tuition fees in kindergarten and school</a>
+					<span>February 5, 2018</span>
+					<hr>
+					<p>What we are talking about In June this year, the Verkhovna Rada amended the Tax Code of Ukraine.
+						From now on, parents who receive an official…</p>
+				</div>
+			</li>
+			<li class="publications__item publication">
+				<div class="publication__wrapper">
+					<a href="#">Currency control is dead, long live currency control!</a>
+					<span>June 14, 2018</span>
+					<hr>
+					<p>Experts hold conferences, round tables and other events on "liberalization of currency
+						legislation." Lawyers-experts-novelists rub their fingers about "ctrl + c / ctrl + v".</p>
+				</div>
+			</li>
+		</ul>
+		<button class="publications-main__btn">More publications</button>
+		<hr>
+	</section>
+</main>
+<footer id="footer">
+	<div class="footer">
+		<div class="footer__wrap">
+			<div class="footer__footer-address footer-address">
+				<span class="footer-address__text">Kyiv, Mechnikova str., 14/1</span>
+				<i class="footer__circle fa-solid fa-circle"></i>
+				<a class="footer-address__link" target="_blank"
+				   href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4367984,30.5301301,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800">on
+					map</a>
+			</div>
+			<div class="footer__contacts footer-contacts">
+				<a target="_blank" href="https://facebook.com"><i
+						class="footer-contacts__facebook fa-brands fa-facebook"></i></a>
+				<i class="footer__circle fa-solid fa-circle"></i>
+				<a class="footer-contacts__tel" href="tel:0800 211 927">0800 211 927</a>
+				<i class="footer__circle fa-solid fa-circle"></i>
+				<a class="footer-contacts__email" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+			</div>
+		</div>
+		<p class="footer__rights rights">© 2021 HLEGAL Law company, LLC</p>
+	</div>
+</footer>
+<script src="../scripts/mob-menu.js"></script>
+</body>
+</html>

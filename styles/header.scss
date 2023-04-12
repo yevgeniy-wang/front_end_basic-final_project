@@ -1,0 +1,287 @@
+@import "assets";
+
+.hide {
+  overflow: hidden;
+}
+
+.switch-lang {
+  display: flex;
+}
+
+.switch-lang input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.switch-lang label {
+  @include montserrat(700, 12px, 15px);
+  color: $grey-text;
+  text-align: center;
+  padding: 5px 7px;
+  border-radius: 8px;
+
+}
+
+.switch-lang label:hover {
+  cursor: pointer;
+  background: $grey-bg;
+}
+
+.switch-lang input:checked + label, {
+  background-color: $accent;
+  color: $white;
+}
+
+.header-tel:link, .header-tel:visited {
+  @include montserrat(700, 16px, 20px);
+  color: $grey-text;
+}
+
+.header-mob {
+  display: none;
+
+  &__top {
+    @include flex(center, space-between);
+    padding: 12px 15px;
+    background: $grey-bg;
+  }
+
+  &__menu {
+    @include flex(center, initial);
+    transition: all 0.7s ease;
+    gap: 20px;
+    flex-direction: column;
+    background: $white;
+    border-radius: 12px 12px 0 0;
+    bottom: 0;
+    position: absolute;
+    margin: 0 2vw;
+    height: 0;
+    width: 96vw;
+    overflow: hidden;
+
+    &-bg {
+      width: 100vw;
+      background: $main-regular;
+      position: absolute;
+      transition: opacity 1s ease;
+    }
+  }
+
+  .active-bg {
+    height: 100vh;
+    opacity: 0.8;
+  }
+
+  .active-menu {
+    height: 280px;
+    padding: 12px 0;
+  }
+
+  &__categories {
+    @include flex(stretch, initial);
+    @include montserrat(700, 24px, 30px);
+    width: 94%;
+    gap: 15px;
+    flex-direction: column;
+
+    li {
+      padding: 7px 0;
+      background: $grey-bg;
+      border-radius: 12px;
+      text-align: center;
+
+      a {
+        display: block;
+      }
+
+      u {
+        color: $accent;
+      }
+    }
+
+    li:active {
+      background: $grey-separator;
+    }
+  }
+}
+
+.close-btn:link {
+  align-self: flex-end;
+  color: $red;
+  margin-right: 12px;
+}
+
+.close-btn:active {
+  background: $grey-separator;
+  border-radius: 8px;
+}
+
+
+.header-mob__bot {
+  @include flex(center, space-between);
+  padding: 15px 15px 10px;
+}
+
+.logo {
+  @include flex(flex-start, initial);
+  @include montserrat(400, min(5.3vw, 36px), min(6.5vw, 44px));
+  gap: 4px;
+
+  svg {
+    display: none;
+  }
+
+  &__hlegal {
+    font-weight: 600;
+    color: $main-regular;
+    text-align: start;
+  }
+
+  &__hlegal:first-letter {
+    color: $accent;
+  }
+
+  &__law {
+    font-size: min(1.066vw, 7.15px);
+    line-height: min(2.666vw, 18px);
+    font-weight: 600;
+    color: $main-regular;
+    text-transform: uppercase;
+    letter-spacing: min(0.8vw, 5.2px);
+    padding-left: min(0.3vw, 5.2px);
+    text-align: start;
+    white-space: nowrap;
+  }
+
+  span {
+    color: $main-regular;
+    white-space: nowrap;
+  }
+
+  &__image {
+    width: 40%;
+    fill: $main-regular;
+  }
+
+  &__slash {
+    width: 6.78%;
+  }
+
+  &__top {
+    @include flex(flex-start, initial);
+
+    span {
+      display: inline-flex;
+    }
+  }
+}
+
+.fa-bars {
+  font-size: 18px;
+  color: $main-regular;
+  padding: 5px;
+}
+
+.icon:active {
+  background: $grey-separator;
+  border-radius: 8px;
+}
+
+.header-tab {
+  @include flex(flex-start, initial);
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 60px;
+  display: none;
+  text-align: center;
+}
+
+.fa-circle {
+  font-size: 6px;
+  color: $grey-separator;
+}
+
+.main-info {
+  @include flex(center, initial);
+  gap: 6px;
+
+
+  &__address {
+    @include montserrat(400, 16px, 20px);
+    color: $grey-text;
+  }
+
+  &__fa-facebook {
+    font-size: 24px;
+    color: $grey-text;
+  }
+
+  &__fa-facebook:hover {
+    color: $accent;
+  }
+}
+
+.header-nav {
+  @include montserrat(700, 16px, 20px);
+  @include flex(center, initial);
+  gap: 15px;
+
+  &__current {
+    text-decoration: underline;
+    color: $accent;
+    text-underline-offset: 3px;
+  }
+}
+
+.header-nav {
+  a:hover {
+    text-decoration: underline;
+    color: $link-regular;
+    text-underline-offset: 3px;
+  }
+
+}
+
+.header-desk {
+  @include flex(center, space-between);
+  text-align: center;
+  display: none;
+
+  &__menu {
+    @include flex(flex-end, center);
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.fa-xmark {
+  font-size: 30px;
+}
+
+
+@media screen and (min-width: 0) and (max-width: 425px) {
+  .header-mob {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 914px) {
+  .header-tab {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 915px) {
+  .header-desk {
+    display: flex;
+    padding: 50px 60px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .header-desk {
+    justify-content: space-around;
+    padding: 50px 0;
+  }
+}

@@ -1,0 +1,70 @@
+@import "assets";
+
+.contact-form {
+  @include flex(initial, initial);
+  flex-direction: column;
+  gap: 30px;
+  background: $grey-bg;
+  padding: 30px;
+  border-radius: 12px;
+
+  h1 {
+    @include montserrat(700, 1.875rem, 2.3125rem);
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  fieldset {
+    @include flex(initial, initial);
+    flex-direction: column;
+    gap: 15px;
+
+    legend {
+      @include montserrat(700, 0.875rem, 1.0625rem);
+      padding-bottom: 15px;
+      text-transform: uppercase;
+      color: $grey-text;
+    }
+
+    input, textarea {
+      @include montserrat(400, 1rem, 1.625rem);
+      color: $grey-text;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      width: calc(100% - 30px);
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    input:focus, textarea:focus {
+      outline: 1px solid $link-active;
+    }
+
+    input:invalid, textarea:invalid {
+      outline: 1px solid $link-active;
+    }
+
+  }
+
+  input[type=submit] {
+    color: $white;
+    @include montserrat(700, 1rem, 1.25rem);
+    padding: 18px 0;
+    background: $link-active;
+    border: none;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+  }
+
+  input[type=submit]:hover {
+    background: $link-hover;
+  }
+
+  input[type=submit]:active {
+    background: $link-active;
+  }
+}

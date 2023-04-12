@@ -1,0 +1,93 @@
+@import "assets";
+
+.they-trust{
+  @include flex(initial, center);
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 60px;
+
+  &__heading{
+    @include montserrat(700, 0.875rem, 1.0625rem);
+    text-transform: uppercase;
+    align-self: center;
+    color: $main-regular;
+  }
+}
+
+.trust-list{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &__item{
+    @include flex(center, center);
+    height:120px;
+
+    &--hilel{
+      background: $hillel-bg;
+    }
+
+    &--wanna-biz{
+      background: $wannabiz-bg;
+    }
+
+    &--tapgerine{
+      background: $tap-bg;
+    }
+
+    &--3dlook{
+      background: $look3d-bg;
+    }
+
+    &--orangear{
+      background: $orangear-bg;
+    }
+
+    &--adtelligent{
+      background: $adtellient-bg;
+    }
+
+    &--clickky{
+      background: $clicky-bg;
+    }
+
+    &--ecoleasing{
+      background: $ecoleasing-bg;
+    }
+
+    &--infratek{
+      background: $infratek-bg;
+    }
+
+    &--city-park{
+      background: $citypark-bg;
+    }
+
+    &--artprint{
+      background: $artprint-bg;
+    }
+
+    &--ultimate-card{
+      background: $ultimatecard-bg;
+    }
+  }
+}
+
+@media screen and (min-width: 600px){
+  .trust-list{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .trust-list{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1900px){
+  .trust-list{
+    margin: 0 9vw 60px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}

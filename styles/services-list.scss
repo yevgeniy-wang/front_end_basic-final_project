@@ -1,0 +1,83 @@
+@import "assets";
+
+.services {
+  @include flex(flex-start, initial);
+  flex-direction: column;
+  gap: 30px;
+  padding: 25px 30px 60px;
+
+  &__heading {
+    @include montserrat(700, 1.875rem, 2.3125rem);
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  &__link {
+    @include montserrat(700, 0.875rem, 0.0625rem);
+    text-transform: uppercase;
+
+    i {
+      font-size: 0.625rem;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__item {
+    @include flex(flex-start, initial);
+    flex-direction: column;
+    gap: 15px;
+
+    img {
+      padding: 15px;
+      background: $white;
+      border-radius: 24px;
+      margin-bottom: 15px;
+    }
+
+    a:link {
+      @include montserrat(700, 1.375rem, 1.6875rem);
+    }
+
+    p {
+      @include montserrat(400, 1rem, 1.625rem);
+      color: $white;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .services {
+    padding: 45px 60px 60px;
+    gap: 60px;
+
+    &__list {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    &__heading {
+      @include montserrat(700, 2.375rem, 2.875rem);
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .services {
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .services {
+    padding: 45px 15vw 60px;
+  }
+}

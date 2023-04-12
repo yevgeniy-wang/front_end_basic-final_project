@@ -1,0 +1,22 @@
+@import "header";
+@import "footer";
+@import "assets";
+@import "services-list";
+@import "they-trust";
+@import "dark-header";
+
+.shadow1 {
+  height: 10px;
+  background: $services-shadow1;
+  border-radius: 0 0 12px 12px;
+  margin: auto;
+  width: 98%;
+}
+
+.shadow2 {
+  height: 10px;
+  background: $services-shadow2;
+  border-radius: 0 0 12px 12px;
+  margin: auto;
+  width: 96%;
+}

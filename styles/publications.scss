@@ -1,0 +1,124 @@
+@import "assets";
+
+.publications {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.publications-main {
+  @include flex(initial, center);
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 30px 0;
+  background: $grey-bg;
+
+  hr {
+    height: 2px;
+    background: $grey-separator;
+  }
+
+  &__btn {
+    @include montserrat(700, 1rem, 1.25rem);
+    color: $white;
+    padding: 18px 30px;
+    background: $link-regular;
+    box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    border: none;
+    align-self: center;
+  }
+
+  &__btn:active {
+    background: $link-active;
+  }
+
+  &__btn:hover {
+    background: $link-hover;
+    cursor: pointer;
+  }
+
+  &__heading {
+    @include montserrat(700, 1.875rem, 2.3125rem);
+    background: $gradient-redtext;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__link {
+    @include montserrat(700, 0.875rem, 0.0625rem);
+    text-transform: uppercase;
+
+    i {
+      font-size: 0.625rem;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.publication {
+  @include flex(initial, initial);
+  flex-direction: column;
+  border-radius: 8px;
+  background: $white;
+
+  &__image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__wrapper {
+    @include flex(initial, initial);
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+
+    a {
+      @include montserrat(700, 1rem, 1.25rem);
+    }
+
+    span {
+      @include montserrat(700, 0.75rem, 0.9375rem);
+      color: $grey-text;
+    }
+
+    p {
+      @include montserrat(400, 0.875rem, 1.375rem);
+    }
+
+    hr {
+      height: 4px;
+      background: $grey-separator;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .publications {
+    grid-template-columns: 1fr 1fr;
+  }
+  .publications-main {
+    padding: 30px 60px 0;
+
+    &__heading {
+      @include montserrat(700, 2.375rem, 2.875rem);
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .publications {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media screen and (min-width: 1920px) {
+  .publications {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .publications-main {
+    padding: 30px 15vw 0;
+  }
+}
